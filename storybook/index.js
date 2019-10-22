@@ -1,6 +1,11 @@
 import './rn-addons';
 
-import { configure, getStorybookUI } from '@storybook/react-native';
+import { ProviderDeco, ProviderDeco2 } from './decorators';
+import {
+  addDecorator,
+  configure,
+  getStorybookUI,
+} from '@storybook/react-native';
 
 // import stories
 configure(() => {
@@ -11,5 +16,7 @@ configure(() => {
 // Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
 // To find allowed options for getStorybookUI
 const StorybookUIRoot = getStorybookUI({ port: 7007, host: 'localhost' });
+
+addDecorator(ProviderDeco);
 
 export default StorybookUIRoot;
