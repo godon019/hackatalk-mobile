@@ -1,8 +1,10 @@
 import React, { useReducer } from 'react';
 
+import { MUTATION_ADD_FRIEND } from '../graphql/mutations';
 import { User } from '../types';
 import createCtx from '../utils/createCtx';
 import produce from 'immer';
+import { useMutation } from '@apollo/react-hooks';
 
 interface Context {
   friendState: State;
@@ -99,11 +101,31 @@ const reducer: Reducer = (state = initialState, action) => {
 function FriendProvider(props: Props): React.ReactElement {
   const [friendState, dispatch] = useReducer<Reducer>(reducer, initialState);
 
+  const [addFriend, { data }] = useMutation(MUTATION_ADD_FRIEND);
+
   const actions = {
-    addFriend: addFriend(dispatch),
+    // legacy
+    // addFriend: addFriend(dispatch),
+
+    // new
+    addFriend: (user: User): void => {
+      // user id provided from argument is fake one currently
+      console.log('add friend mutation', user.id);
+      // so I have to provide real user id hard coded
+      addFriend({
+        variables: { friendId: '24d13050-4e54-11ea-9eda-8f359f9a15ba' },
+      })
+        .then((res) => {
+          console.log('success');
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log('fail');
+          console.log(err);
+        });
+    },
     deleteFriend: deleteFriend(dispatch),
   };
-
   return (
     <Provider value={{ friendState, ...actions }}>{props.children}</Provider>
   );

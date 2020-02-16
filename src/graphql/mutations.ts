@@ -20,8 +20,8 @@ export const MUTATION_SEND_VERIFICATION = gql`
 `;
 
 export const MUTATION_SIGN_IN = gql`
-  mutation signInEmail($email: String! $password: String!) {
-    signInEmail(email: $email password: $password) {
+  mutation signInEmail($email: String!, $password: String!) {
+    signInEmail(email: $email, password: $password) {
       token
       user {
         id
@@ -31,6 +31,16 @@ export const MUTATION_SIGN_IN = gql`
         statusMessage
         authType
       }
+    }
+  }
+`;
+
+export const MUTATION_ADD_FRIEND = gql`
+  mutation addFriend($friendId: ID!){
+    addFriend(friendId: $friendId) {
+      id
+      email
+      name
     }
   }
 `;
