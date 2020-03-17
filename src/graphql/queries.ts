@@ -61,17 +61,3 @@ export const QUERY_FRIENDS = gql`
     }
   }
 `;
-
-export const QUERY_FRIENDS = gql`
-  query friends {
-    friends {
-      id
-      isOnline
-      nickname
-      name
-      photoURL
-      statusMessage
-      thumbURL
-    }
-  }
-`;

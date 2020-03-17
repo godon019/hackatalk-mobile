@@ -298,9 +298,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  admin
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -435,9 +433,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  geoseong-hello-hello-hello-hello-hello-hello-hello-hello
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -572,9 +568,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  hyochan
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -709,9 +703,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  mars
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -846,9 +838,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  gordon
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -983,9 +973,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  admin2
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -1120,9 +1108,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  geoseong2
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -1257,9 +1243,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  hyochan2
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -1394,9 +1378,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  mars2
-                </Text>
+                />
                 <View
                   style={
                     Array [
@@ -1531,9 +1513,7 @@ exports[`Rendering renders without crashing 1`] = `
                       },
                     ]
                   }
-                >
-                  gordon2
-                </Text>
+                />
                 <View
                   style={
                     Array [
